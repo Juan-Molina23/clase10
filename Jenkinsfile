@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Check Python Version') {
       steps {
-        bat '"C:\\Users\\rmoli\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" --version'
+        bat '"C:\\Program Files\\Python312\\python.exe" --version'
       }
     }
 
@@ -23,7 +23,7 @@ pipeline {
     stage('Instalar dependencias') {
       steps {
         bat """
-          "C:\\Users\\rmoli\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe" -m venv %VENV%
+          "C:\\Program Files\\Python312\\python.exe" -m venv %VENV%
           call %VENV%\\Scripts\\activate.bat
           "%VENV%\\Scripts\\pip.exe" install --upgrade pip
           "%VENV%\\Scripts\\pip.exe" install -r requirements.txt
