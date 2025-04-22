@@ -61,7 +61,7 @@ pipeline {
     stage('Push to DockerHub') {
       steps {
         script {
-          docker.image('irenly/clase10-talleci-cd').push()
+          docker.image('juanlaleyenda1223/clase10-tallejenkins').push()
         }
       }
     }
